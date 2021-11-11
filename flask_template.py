@@ -17,7 +17,7 @@ colors_dict['C']='orange'
 colors_dict['D']='purple'
 colors_dict['F']='red'
 
-colors=['RED','BLUE','GREEN','YELLOW','ORANGE','PURPLE']
+colors=['RED','BLUE','GREEN','YELLOW','ORANGE','PURPLE','GREY','SILVER','TEAL']
 
 states = {
     'AK': 'Alaska',
