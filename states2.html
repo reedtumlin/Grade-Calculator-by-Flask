@@ -8,6 +8,9 @@ body {background-color: {{ color }} }
 <br><br>
 <label>STATE:</label>
 <select name='state'>
+{% for s in states %}
+<option value='{{ s }}'>{{ s }}</option>
+{% endfor  %}
 </select>
 
 <br><br>
@@ -16,10 +19,24 @@ body {background-color: {{ color }} }
 <br><br>
 <label>FAVORITE COLOR</label>
 <select name='color'>
+{% for c in colors %}
+<option value='{{ c }}'>{{ c }}</option>
+{% endfor %}
+
+
 </select>
 <br><br>
 <input type='submit' text='SUBMIT'>
 </form>
+
+
+
+{% if data %}
+<br><br>
+<h1>Hello, {{ data.name }}, you live in {{ data.state }}!</h1>
+
+{% endif %}
+
 
 
 </body>
