@@ -17,7 +17,7 @@ colors_dict['C']='orange'
 colors_dict['D']='purple'
 colors_dict['F']='red'
 
-colors=['RED','BLUE','GREEN','YELLOW','ORANGE','PURPLE','GREY','SILVER','TEAL']
+colors=['RED','BLUE','GREEN','YELLOW','ORANGE','PURPLE']
 
 states = {
     'AK': 'Alaska',
@@ -141,11 +141,39 @@ def show_calculation():
     
     return grades_output
     
-
+@app.route('/grades' ,methods=['GET','POST'])
+def calculate_grades():
+    Quiz_Grades='Quiz Grades'
+    Test_Grades='Test Grades'
+    
+    if request.method=='Quiz Grades':
+        sum1 =Quiz_Grades + Quiz_Grades
+        print('sum1')
+    elif request.method=='Test Grades':
+        sum2 =Test_Grades + Test_Grades
+        print('sum2')
+    elif request.method=='Project Grades':
+        sum3 =Project_grades + Project Grades
+        print('sum3')
+    
+        
+    
+    
 
 @app.route('/states',methods=['GET','POST'])
 def show_states():
-    return render_template('states2.html')
+    #return render_template('states2.html')
+    if request.method=='GET':
+        favorite_color='yellow'
+        return render_template('states2.html',color=favorite_color,states=states,colors=colors)
+    elif request.method=='POST':
+        data={}
+        data['name']=request.form['Student_Name']
+        state=request.form['state']
+        data['state']=state
+        favorite_color=request.form['color']
+        return render_template('states2.html',color=favorite_color,states=states,colors=colors,data=data)
+        
 
 
 
