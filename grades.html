@@ -1,0 +1,37 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>GradeTracker</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Team-IS3280 Fall 2021 Members</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">110;#Team-IS3280 Fall 2021 Members</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<form method='POST' action='/calculate'>
+<label>Student Name:</label>
+<input type='text' name='student_name'>
+<br>
+<br>
+<label>Quiz Grades</label>
+<input type='text' name='quiz_grades' placeholder='Enter grades separated by ;'>
+<input type='text' name='quiz_percentage' placeholder='Enter the percentage of your quiz grades '>
+<br>
+<br>
+
+<label>Test Grades</label>
+<input type='text' name='test_grades' placeholder='Enter grades separated by ;'>
+<input type='text' name='test_percentage' placeholder='Enter the percentage of your test grades '>
+
+<br>
+<br>
+<label>Project Grades</label>
+<input type='text' name='project_grades' placeholder='Enter grades separated by ;'>
+<input type='text' name='project_percentage' placeholder='Enter the percentage of your project grades '>
+
+<br>
+<br>
+<button type='submit'>SUBMIT</button>
+</form>
+<html>
